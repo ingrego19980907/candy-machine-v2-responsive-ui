@@ -593,13 +593,13 @@ const Home = (props: HomeProps) => {
                     message = 'Transaction Timeout! Please try again.';
                 } else if (error.message.indexOf('0x138')) {
                 } else if (error.message.indexOf('0x137')) {
-                    message = `SOLD OUT!`;
+                    message = `wait!`;
                 } else if (error.message.indexOf('0x135')) {
                     message = `Insufficient funds to mint. Please fund your wallet.`;
                 }
             } else {
                 if (error.code === 311) {
-                    message = `SOLD OUT!`;
+                    message = `wait!`;
                 } else if (error.code === 312) {
                     message = `Minting period hasn't started yet.`;
                 }
@@ -650,11 +650,11 @@ const Home = (props: HomeProps) => {
                 <MintContainer>
                     <DesContainer>
                         <NFT elevation={3}>
-                            <h2>My NFT</h2>
+                            <h2>Mint will be 17:00 UTC</h2>
                             <br/>
                             <div><Price
                                 label={isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)}/><Image
-                                src="cool-cats.gif"
+                                src="107.png"
                                 alt="NFT To Mint"/></div>
                             <br/>
                             {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) && isBurnToken &&
